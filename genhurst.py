@@ -46,7 +46,7 @@ def genhurst(S,q):
             dV = S[np.arange(tt,L,tt)] - S[np.arange(tt,L,tt)-tt] 
             VV = S[np.arange(tt,L+tt,tt)-tt]
             N = len(dV) + 1
-            X = np.arange(1,N+1)
+            X = np.arange(1,N+1,dtype=np.float64)
             Y = VV
             mx = np.sum(X)/N
             SSxx = np.sum(X**2) - N*mx**2
@@ -55,7 +55,7 @@ def genhurst(S,q):
             cc1 = SSxy/SSxx
             cc2 = my - cc1*mx
             ddVd = dV - cc1
-            VVVd = VV - np.multiply(cc1,np.arange(1,N+1)) - cc2
+            VVVd = VV - np.multiply(cc1,np.arange(1,N+1,dtype=np.float64)) - cc2
             mcord[tt-1] = np.mean( np.abs(ddVd)**q )/np.mean( np.abs(VVVd)**q )
             
         mx = np.mean(np.log10(x))
