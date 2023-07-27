@@ -12,5 +12,5 @@ This implementation is a more or less literal translation from Matlab to Python 
 
 ### How to use the code
 
-A function `mH = genhurst(S,q)` is defined, with `S` the time series to be analyzed and `q` the Hurst exponent to be used, yielding a numerical (mean) value `mH`.
+A function `mH = genhurst(S,q)` is defined, with `S` the time series to be analyzed as a numpy array and `q` the Hurst exponent to be used, yielding a numerical (mean) value `mH`.
 
