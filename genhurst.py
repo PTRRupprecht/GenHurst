@@ -6,7 +6,7 @@
 #
 ####################################
 # H = genhurst(S,q)
-# S is 1xT data series (T>50 recommended)
+# S is Tx1 data series (T>50 recommended)
 # calculates H, specifies the exponent q
 #
 # example:
